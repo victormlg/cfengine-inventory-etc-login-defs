@@ -8,7 +8,7 @@
 
 * Inventory
 
-- //etc/login.defs/ :: with each configured KEY=VALUE
+- =/etc/login.defs= :: Each configured parameter is reported as =NAME=VALUE=
 
 * Requirements
 
