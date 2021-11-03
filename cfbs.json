@@ -8,7 +8,7 @@
       "repo": "https://github.com/nickanderson/cfengine-inventory-etc-login-defs",
       "version": "0.0.1",
       "steps": [
-        "copy ./inventory-etc-login-defs.cf services/inventory-login-defs/inventory-login-defs.cf",
+        "copy ./inventory-etc-login-defs.cf services/inventory-etc-login-defs/inventory-login-defs.cf",
         "json cfbs/def.json def.json"
       ]
     }
