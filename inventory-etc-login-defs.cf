@@ -1,0 +1,38 @@
+body file control
+{
+      namespace => "nickanderson";
+}
+
+bundle agent inventory_etc_login_defs
+{
+  vars:
+      "_etc_login_defs_path" string => "/etc/login.defs";
+
+
+      # A KEY (SPC) VALUE formatted file
+      "_etc_login_defs"
+        data => data_readstringarrayidx(
+                                         "$(_etc_login_defs_path)", # File
+                                         "#[^\n]*",                 # Comment
+                                         "\s+",                     # Split
+                                         inf,                       # Max entries
+                                         inf),                      # Max bytes
+        if => fileexists( $(_etc_login_defs_path) );
+
+      "_etc_login_defs_idx" slist => getindices( _etc_login_defs );
+
+      "etc_login_defs[$(_etc_login_defs_idx)]"
+        string => "$(_etc_login_defs[$(_etc_login_defs_idx)][0])=$(_etc_login_defs[$(_etc_login_defs_idx)][1])",
+        meta => { "inventory", "attribute_name=$(_etc_login_defs_path)" };
+}
+
+body file control
+{
+        namespace => "default";
+}
+
+bundle agent __main__
+{
+  methods:
+      "nickanderson:inventory_etc_login_defs";
+}

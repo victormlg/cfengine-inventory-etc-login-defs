@@ -1,0 +1,15 @@
+#+title: inventory-etc-login-defs
+
+* Synopsis
+
+- *Name*: =inventory-etc-login-defs=
+- *Version*: =0.0.1=
+- *Description*: Inventory configured items in =/etc/login.defs=.
+
+* Inventory
+
+- //etc/login.defs/ :: with each configured KEY=VALUE
+
+* Requirements
+
+- CFEngine version 3.7.0 or greater
