@@ -3,7 +3,7 @@
 * Synopsis
 
 - *Name*: =inventory-etc-login-defs=
-- *Version*: =0.0.1=
+- *Version*: =0.0.2=
 - *Description*: Inventory configured items in =/etc/login.defs=.
 
 * Inventory
