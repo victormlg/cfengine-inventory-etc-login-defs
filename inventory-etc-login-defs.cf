@@ -13,7 +13,7 @@ bundle agent inventory_etc_login_defs
       "_etc_login_defs"
         data => data_readstringarrayidx(
                                          "$(_etc_login_defs_path)", # File
-                                         "^\s*(#.*|$)",             # Comment
+                                         "\s*#[^\n]*",              # Comment
                                          "\s+",                     # Split
                                          inf,                       # Max entries
                                          inf),                      # Max bytes
