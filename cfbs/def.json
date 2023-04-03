@@ -1,6 +1,6 @@
 {
     "vars": {
-        "control_common_bundlesequence_classification": ["nickanderson:inventory_login_defs"]
+        "control_common_bundlesequence_classification": ["nickanderson:inventory_etc_login_defs"]
     },
     "inputs": ["services/inventory-etc-login-defs/inventory-etc-login-defs.cf"]
 }
